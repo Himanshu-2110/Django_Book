@@ -1,0 +1,136 @@
+Part I of this book teaches you the basic concepts 
+you’ll need to write Python programs. Many of 
+these concepts are common to all programming 
+languages, so they’ll be useful throughout your life 
+as a programmer.
+In Chapter 1 you’ll install Python on your computer and run your first 
+program, which prints the message Hello world! to the screen. 
+In Chapter 2 you’ll learn to store information in variables and work 
+with text and numerical values.
+Chapters 3 and 4 introduce lists. Lists can store as much information 
+as you want in one variable, allowing you to work with that data efficiently. 
+You’ll be able to work with hundreds, thousands, and even millions of values 
+in just a few lines of code. 
+In Chapter 5 you’ll use if statements to write code that responds one 
+way if certain conditions are true, and responds in a different way if those 
+conditions are not true.
+Chapter 6 shows you how to use Python’s dictionaries, which let you 
+make connections between different pieces of information. Like lists, dictionaries can contain as much information as you need to store. 
+In Chapter 7 you’ll learn how to accept input from users to make your 
+programs interactive. You’ll also learn about while loops, which run blocks 
+of code repeatedly as long as certain conditions remain true.
+In Chapter 8 you’ll write functions, which are named blocks of code 
+that perform a specific task and can be run whenever you need them. 
+2 Part I
+Chapter 9 introduces classes, which allow you to model real-world 
+objects, such as dogs, cats, people, cars, rockets, and much more, so your 
+code can represent anything real or abstract. 
+Chapter 10 shows you how to work with files and handle errors so your 
+programs won’t crash unexpectedly. You’ll store data before your program 
+closes, and read the data back in when the program runs again. You’ll learn 
+about Python’s exceptions, which allow you to anticipate errors, and make 
+your programs handle those errors gracefully.
+In Chapter 11 you’ll learn to write tests for your code to check that 
+your programs work the way you intend them to. As a result, you’ll be able 
+to expand your programs without worrying about introducing new bugs. 
+Testing your code is one of the first skills that will help you transition from 
+beginner to intermediate programmer.
+1
+G ett i ng S tarte d
+In this chapter you’ll run your first Python 
+program, hello_world.py. First, you’ll need 
+to check whether Python is installed on 
+your computer; if it isn’t, you’ll install it. You’ll 
+also install a text editor to work with your Python 
+programs. Text editors recognize Python code and 
+highlight sections as you write, making it easy to 
+understand the structure of your code.
+Setting Up Your Programming Environment
+Python differs slightly on different operating systems, so you’ll need to keep 
+a few considerations in mind. Here, we’ll look at the two major versions 
+of Python currently in use and outline the steps to set up Python on your 
+system. 
+4 Chapter 1
+Python 2 and Python 3
+Today, two versions of Python are available: Python 2 and the newer 
+Python 3. Every programming language evolves as new ideas and technologies emerge, and the developers of Python have continually made the 
+language more versatile and powerful. Most changes are incremental and 
+hardly noticeable, but in some cases code written for Python 2 may not 
+run properly on systems with Python 3 installed. Throughout this book I’ll 
+point out areas of significant difference between Python 2 and Python 3, so 
+whichever version you use, you’ll be able to follow the instructions.
+If both versions are installed on your system or if you need to install 
+Python, use Python 3. If Python 2 is the only version on your system and 
+you’d rather jump into writing code instead of installing Python, you can 
+start with Python 2. But the sooner you upgrade to using Python 3 the 
+better, so you’ll be working with the most recent version.
+Running Snippets of Python Code
+Python comes with an interpreter that runs in a terminal window, allowing you to try bits of Python without having to save and run an entire 
+program. 
+Throughout this book, you’ll see snippets that look like this:
+u >>> print("Hello Python interpreter!") 
+Hello Python interpreter! 
+The text in bold is what you’ll type in and then execute by pressing 
+enter. Most of the examples in the book are small, self-contained programs 
+that you’ll run from your editor, because that’s how you’ll write most of your 
+code. But sometimes basic concepts will be shown in a series of snippets run 
+through a Python terminal session to demonstrate isolated concepts more 
+efficiently. Any time you see the three angle brackets in a code listing u, 
+you’re looking at the output of a terminal session. We’ll try coding in the 
+interpreter for your system in a moment. 
+Hello World!
+A long-held belief in the programming world has been that printing a 
+Hello world! message to the screen as your first program in a new language 
+will bring you luck. 
+In Python, you can write the Hello World program in one line:
+print("Hello world!")
+Such a simple program serves a very real purpose. If it runs correctly 
+on your system, any Python program you write should work as well. We’ll 
+look at writing this program on your particular system in just a moment. 
+Getting Started 5
+Python on Different Operating Systems 
+Python is a cross-platform programming language, which means it runs on 
+all the major operating systems. Any Python program you write should run 
+on any modern computer that has Python installed. However, the methods 
+for setting up Python on different operating systems vary slightly.
+In this section you’ll learn how to set up Python and run the Hello World
+program on your own system. You’ll first check whether Python is installed 
+on your system and install it if it’s not. Then you’ll install a simple text editor and save an empty Python file called hello_world.py. Finally, you’ll run 
+the Hello World program and troubleshoot anything that didn’t work. I’ll 
+walk you through this process for each operating system, so you’ll have a 
+beginner-friendly Python programming environment.
+Python on Linux
+Linux systems are designed for programming, so Python is already installed 
+on most Linux computers. The people who write and maintain Linux expect 
+you to do your own programming at some point and encourage you to do 
+so. For this reason there’s very little you have to install and very few settings 
+you have to change to start programming.
+Checking Your Version of Python 
+Open a terminal window by running the Terminal application on your 
+system (in Ubuntu, you can press ctrl-alt-T). To find out whether Python 
+is installed, enter python with a lowercase p. You should see output telling 
+you which version of Python is installed and a >>> prompt where you can 
+start entering Python commands, like this:
+$ python
+Python 2.7.6 (default, Mar 22 2014, 22:59:38) 
+[GCC 4.8.2] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 
+This output tells you that Python 2.7.6 is currently the default version 
+of Python installed on this computer. When you’ve seen this output, press 
+ctrl-D or enter exit() to leave the Python prompt and return to a terminal 
+prompt. 
+To check for Python 3, you might have to specify that version; so even 
+if the output displayed Python 2.7 as the default version, try the command 
+python3:
+$ python3
+Python 3.5.0 (default, Sep 17 2015, 13:05:18) 
+[GCC 4.8.4] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 
+6 Chapter 1
+This output means you also have Python 3 installed, so you’ll be 
+able to use either version. Whenever you see the python command in this 
+book, enter python3 instead. Most Linux distributions have Python already 
+installed, but if for some reason yours didn’t or if your system came with 
+Python 2 and you want to install Python 3, refer to Appendix A.
